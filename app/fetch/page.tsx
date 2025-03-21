@@ -1,8 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
-
-// import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 
 async function fetchCatNew() {
   const response = await fetch("https://cataas.com/cat");
@@ -10,11 +8,13 @@ async function fetchCatNew() {
   return URL.createObjectURL(blob);
 }
 
+/*
 function fetchCatOld() {
   return fetch("https://cataas.com/cat")
     .then((res) => res.blob())
     .then((blob) => URL.createObjectURL(blob));
 }
+*/
 
 export default function Home() {
   const [url, setUrl] = useState("");
